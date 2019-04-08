@@ -1,3 +1,5 @@
 #!/usr/local/bin/node
 
-console.log("Welcome to the Brain Games!");
+import welcome from '..';
+
+welcome();

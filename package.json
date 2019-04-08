@@ -1,6 +1,6 @@
 {
   "name": "brain_games_ivan_bermanov",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "console games",
   "main": "dist/index.js",
   "bin": {
@@ -15,6 +15,9 @@
   },
   "author": "Ivan Bermanov",
   "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
