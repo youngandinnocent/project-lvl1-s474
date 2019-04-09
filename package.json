@@ -7,7 +7,9 @@
     "brain-games": "dist/bin/brain-games.js"
   },
   "keywords": [
-    "hexlet brain-games"
+    "hexlet",
+    "training project",
+    "brain-games"
   ],
   "files": [
     "dist"
@@ -25,6 +27,10 @@
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.4.3"
+    "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
   }
 }
