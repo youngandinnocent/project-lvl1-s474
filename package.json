@@ -2,10 +2,13 @@
   "name": "brain_games_ivan_bermanov",
   "version": "1.0.8",
   "description": "console games",
-  "main": "dist/index.js",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
+  "keywords": [
+    "hexlet brain-games"
+  ],
   "files": [
     "dist"
   ],
