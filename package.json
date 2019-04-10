@@ -1,10 +1,11 @@
 {
   "name": "brain_games_ivan_bermanov",
-  "version": "1.0.11",
+  "version": "1.0.19",
   "description": "console games",
   "main": "",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "keywords": [
     "hexlet",
