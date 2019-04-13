@@ -1,28 +1,10 @@
-import { cons, car, cdr } from 'hexlet-pairs';
-
 import game from '..';
 
-import random from '../utils';
+import {
+  makePair, getA, getB, getC, firstNum, secondNum,
+} from '../utils';
 
 const gameName = 'What is the result of the expression?';
-
-const makeExpress = (num1, oper, num2) => cons(num1, cons(oper, num2));
-
-/*
-"Получение исходных значений - это очень простая операция - генерация случайного числа.
-После этого вы можете манипулировать присвоенными значениями." - что вы подразумеваете, о чем речь?
-*/
-const firstNum = () => random();
-
-const secondNum = () => random();
-//
-const getNum1 = express => car(express);
-
-const getNum2 = express => cdr(cdr(express));
-
-const getOper = express => car(cdr(express));
-
-export const toString = express => `${getNum1(express)} ${getOper(express)} ${getNum2(express)}`;
 
 const arrayOper = ['+', '-', '*'];
 
@@ -35,18 +17,18 @@ const operation = () => {
   return String(arrayOper[rand]);
 };
 
+const method = () => makePair(firstNum(), operation(), secondNum());
+
 const calculation = (express) => {
-  switch (getOper(express)) {
+  switch (getB(express)) {
     case '+':
-      return getNum1(express) + getNum2(express);
+      return getA(express) + getC(express);
     case '-':
-      return getNum1(express) - getNum2(express);
+      return getA(express) - getC(express);
     default:
-      return getNum1(express) * getNum2(express);
+      return getA(express) * getC(express);
   }
 };
-
-const method = () => makeExpress(firstNum(), operation(), secondNum());
 
 const corrAnswer = question => String(calculation(question));
 

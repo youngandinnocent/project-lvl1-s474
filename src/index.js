@@ -1,6 +1,6 @@
 import { isPair } from 'hexlet-pairs';
 
-import { toString } from './games/calc';
+import { toString } from './utils';
 
 const readline = require('readline-sync');
 

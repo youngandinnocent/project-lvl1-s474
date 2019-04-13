@@ -1,6 +1,6 @@
 import game from '..';
 
-import random from '../utils';
+import { random } from '../utils';
 
 const gameName = 'Answer "yes" if number even otherwise answer "no".';
 
