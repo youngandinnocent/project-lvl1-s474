@@ -4,16 +4,11 @@ import { toString } from './utils';
 
 const readline = require('readline-sync');
 
-const welcome = (gameName) => {
-  console.log('');
-  console.log('Welcome to the Brain Games!');
-  return gameName;
-};
-
 const sumOfQuestions = 3;
 
-const game = (gameName, method, corrAnswer) => {
-  console.log(welcome(gameName));
+const game = (whatToDo, method, corrAnswer) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(whatToDo);
   console.log('');
   const userName = readline.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);

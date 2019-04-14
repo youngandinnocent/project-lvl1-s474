@@ -1,10 +1,11 @@
 import game from '..';
 
 import {
-  makePair, getA, getC, firstNum, secondNum,
+  makePair, firstNum, secondNum,
 } from '../utils';
+import { car, cdr } from 'hexlet-pairs';
 
-const gameName = 'Find the greatest common divisor of given numbers.';
+const whatToDo = 'Find the greatest common divisor of given numbers.';
 
 const space = '';
 
@@ -14,8 +15,8 @@ const space = '';
 const method = () => makePair(firstNum(), space, secondNum());
 
 const calculation = (question) => {
-  const num1 = getA(question);
-  const num2 = getC(question);
+  const num1 = car(question);
+  const num2 = cdr(cdr(question));
   let divisor = num1 < num2 ? num1 : num2;
   while (num1 % divisor !== 0 || num2 % divisor !== 0) {
     divisor -= 1;
@@ -25,6 +26,6 @@ const calculation = (question) => {
 
 const corrAnswer = question => String(calculation(question));
 
-const gcd = () => game(gameName, method, corrAnswer);
+const gcd = () => game(whatToDo, method, corrAnswer);
 
 export default gcd;
