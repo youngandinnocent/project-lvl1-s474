@@ -13,21 +13,21 @@ $ sudo npm install -g brain_games_ivan_bermanov
 
 ## Run
 
-### Even
+**Even**
 
 ```sh
 $ brain-even
 ```
 [![asciicast](https://asciinema.org/a/240324.svg)](https://asciinema.org/a/240324)
 
-### Calculater
+**Calculater**
 
 ```sh
 $ brain-calc
 ```
 [![asciicast](https://asciinema.org/a/240585.svg)](https://asciinema.org/a/240585)
 
-### Gratest Common Diviser
+**Gratest Common Diviser**
 
 ```sh
 $ brain-gcd
