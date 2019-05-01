@@ -1,30 +1,30 @@
-import { isPair } from 'hexlet-pairs';
-
-import { toString } from './utils';
+import { car, cdr } from 'hexlet-pairs';
 
 const readline = require('readline-sync');
 
-const sumOfQuestions = 3;
+const numberOfTimes = 3;
 
-const game = (whatToDo, method, corrAnswer) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(whatToDo);
-  console.log('');
-  const userName = readline.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('');
-  for (let i = 0; i < sumOfQuestions; i += 1) {
-    const question = method();
-    console.log(`Question: ${isPair(question) ? toString(question) : question}`);
+const playGame = (description, getData) => {
+  console.log('\nWelcome to the Brain Games!');
+  console.log(description);
+  const userName = readline.question('\nMay I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
+
+  for (let i = 0; i < numberOfTimes; i += 1) {
+    const data = getData();
+    const question = car(data);
+    const rightAnswer = cdr(data);
+    console.log(`Question: ${question}`);
     const userAnswer = readline.question('Your answer: ');
-    if (userAnswer === corrAnswer(question)) {
+
+    if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${corrAnswer(question)}'.`);
-      return console.log(`Let's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      return console.log(`\nLet's try again, ${userName}!`);
     }
   }
-  return console.log(`Congratulations, ${userName}!`);
+  return console.log(`\nCongratulations, ${userName}!`);
 };
 
-export default game;
+export default playGame;

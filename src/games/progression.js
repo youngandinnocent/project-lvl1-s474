@@ -1,28 +1,29 @@
-import game from '..';
+import { cons } from 'hexlet-pairs';
 
-const whatToDo = 'What number is missing in the progression?';
+import playGame from '..';
 
-const firstNum = Math.floor(Math.random() * 10);
-const step = Math.floor(1 + Math.random() * 11);
-const hidNum = Math.floor(Math.random() * 10);
+import random from '../utils';
 
-const lastIndex = 9;
+const description = 'What number is missing in the progression?';
 
-const method = () => {
-  let result = '';
-  let currentNum = 0;
-  let i = 0;
-  const space = (i !== lastIndex) ? ' ' : '';
-  while (i <= lastIndex) {
-    result += (i === hidNum) ? `..${space}` : String(firstNum + currentNum) + space;
-    i += 1;
-    currentNum += step;
+const progressionLength = 10;
+
+const getProgression = (begin, step, indexOfHiddenNum) => {
+  let progression = '';
+  for (let i = 0; i < progressionLength; i += 1) {
+    const space = (i === progressionLength - 1) ? '' : ' ';
+    progression += (i === indexOfHiddenNum) ? `..${space}` : `${String(begin + step * i)}${space}`;
   }
-  return result;
+  return progression;
 };
 
-const corrAnswer = () => String(firstNum + hidNum * step);
+const getData = () => {
+  const begin = random(0, 10);
+  const step = random(1, 10);
+  const indexOfHiddenNum = random(0, progressionLength - 1);
+  const question = getProgression(begin, step, indexOfHiddenNum);
+  const rightAnswer = String(begin + step * indexOfHiddenNum);
+  return cons(question, rightAnswer);
+};
 
-const progression = () => game(whatToDo, method, corrAnswer);
-
-export default progression;
+export default () => playGame(description, getData);

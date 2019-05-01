@@ -1,22 +1,12 @@
-import game from '..';
+import { cons } from 'hexlet-pairs';
 
-import {
-  makePair, firstNum, secondNum,
-} from '../utils';
-import { car, cdr } from 'hexlet-pairs';
+import playGame from '..';
 
-const whatToDo = 'Find the greatest common divisor of given numbers.';
+import random from '../utils';
 
-const space = '';
+const description = 'Find the greatest common divisor of given numbers.';
 
-// здесь будет функция адаптации генератора под выпадение зависимых по делителю чисел
-// для частоты выпадения
-
-const method = () => makePair(firstNum(), space, secondNum());
-
-const calculation = (question) => {
-  const num1 = car(question);
-  const num2 = cdr(cdr(question));
+const getGCD = (num1, num2) => {
   let divisor = num1 < num2 ? num1 : num2;
   while (num1 % divisor !== 0 || num2 % divisor !== 0) {
     divisor -= 1;
@@ -24,8 +14,12 @@ const calculation = (question) => {
   return divisor;
 };
 
-const corrAnswer = question => String(calculation(question));
+const getData = () => {
+  const firstNum = random(1, 100);
+  const secondNum = random(1, 100);
+  const question = `${firstNum} ${secondNum}`;
+  const rightAnswer = String(getGCD(firstNum, secondNum));
+  return cons(question, rightAnswer);
+};
 
-const gcd = () => game(whatToDo, method, corrAnswer);
-
-export default gcd;
+export default () => playGame(description, getData);

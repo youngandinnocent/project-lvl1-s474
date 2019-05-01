@@ -33,3 +33,17 @@ $ brain-calc
 $ brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/240744.svg)](https://asciinema.org/a/240744)
+
+**Arithmetic progression**
+
+```sh
+$ brain-progression
+```
+[![asciicast](https://asciinema.org/a/243770.svg)](https://asciinema.org/a/243770)
+
+**Prime number**
+
+```sh
+$ brain-prime
+```
+[![asciicast](https://asciinema.org/a/243773.svg)](https://asciinema.org/a/243773)

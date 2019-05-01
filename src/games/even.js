@@ -1,15 +1,17 @@
-import game from '..';
+import { cons } from 'hexlet-pairs';
 
-import { random } from '../utils';
+import playGame from '..';
 
-const whatToDo = 'Answer "yes" if number even otherwise answer "no".';
+import random from '../utils';
 
-const method = () => random();
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const isEven = num => num % 2 === 0;
 
-const corrAnswer = question => (isEven(question) ? 'yes' : 'no');
+const getData = () => {
+  const question = random(1, 100);
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+  return cons(question, rightAnswer);
+};
 
-const even = () => game(whatToDo, method, corrAnswer);
-
-export default even;
+export default () => playGame(description, getData);
