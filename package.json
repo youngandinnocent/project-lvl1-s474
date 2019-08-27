@@ -26,17 +26,17 @@
   "license": "MIT",
   "dependencies": {
     "hexlet-pairs": "^1.0.8",
-    "lodash": "^4.17.14",
-    "readline-sync": "^1.4.9"
+    "lodash": "^4.17.15",
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.4",
-    "@babel/node": "^7.5.0",
-    "@babel/preset-env": "^7.5.4",
-    "babel-eslint": "^10.0.2",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.0"
+    "eslint-plugin-import": "^2.18.2"
   }
 }
