@@ -4,8 +4,13 @@ install:
 start:
 	npx babel-node src/bin/brain-games.js
 
-lint:
-	npx eslint .
+build:
+	rm -rf dist
+	npm run build
 
 publish:
 	npm publish
+
+lint:
+	npx eslint .
+

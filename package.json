@@ -22,18 +22,18 @@
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
-  "author": "Ivan Bermanov",
-  "license": "MIT",
+  "author": "vanek",
+  "license": "ISC",
   "dependencies": {
     "hexlet-pairs": "^1.0.8",
     "lodash": "^4.17.15",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
